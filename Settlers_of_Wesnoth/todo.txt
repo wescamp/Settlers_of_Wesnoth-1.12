@@ -1,0 +1,8 @@
+additional bells when trading
+robber halfing dialog
+gets/keeps longest road
+
+nicer terrain substitution
+
+road interupted by settle: implement recalculation, test
+rename images to complex names (conflict with other addons)
