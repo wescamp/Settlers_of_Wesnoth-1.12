@@ -46,11 +46,7 @@ function sow_tools.format(...)
 		local v = args[i]
 		if getmetatable(v) == "translatable string" then args[i] = tostring(v) end
 	end
-	local unpack_func
-	if wesnoth.compare_versions and wesnoth.compare_versions(string.sub(_VERSION, 5), ">=", "5.2") then unpack_func = table.unpack
-	else unpack_func = unpack
-	end
-	return string.format(unpack_func(args))
+	return string.format(table.unpack(args))
 end
 
 function sow_tools.hex2rgb(hex)

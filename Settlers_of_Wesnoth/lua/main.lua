@@ -1399,7 +1399,7 @@ end
 
 function sow_set_goal()
 	local settings = { speaker = "narrator", image = sow_tools.custom_image_to_core("icons/victory.png") .. "~SCALE(120,120)", caption = tostring(_"Set Game Length"),
-		message = _"Please select the game's length (the amount of victory points to win; the default value is 10). If you have no idea, just choose that."}
+		message = _"Please select the game's length. (The amount of victory points to win; the default value is 10. If you have no idea, just choose that.)"}
 
 		local choices = {}
 		table.insert(choices, _"Very Short (6 Victory Points)")
@@ -1427,12 +1427,6 @@ function sow_set_goal()
 			goal = get_input_integer(10, 1, sow_constants.MAX_UNSIGNED, side_number)
 		end
 		wesnoth.set_variable("sow_game_stats.goal", goal)
-end
-
---this is to disable the annoying "you didn't yet move any unit - really end your turn ? - dialog"
-function sow_disable_turn_done_confirm(side_number)
-	local leader = wesnoth.get_units({ side = side_number, canrecruit = true })[1]
-	if leader then leader.moves = 0 end
 end
 
 -----------------------------------------------------------------------------------

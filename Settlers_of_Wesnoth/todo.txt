@@ -1,3 +1,6 @@
+fix overlay in theme at top left
+fix end turn button popping up extra menu
+
 additional bells when trading
 robber halfing dialog
 gets/keeps longest road
